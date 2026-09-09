@@ -2,101 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Trading Teacher UNIVERSE - FIXED CHART</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wahab Trading Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
 <style>
-*{font-family:Arial; margin:0; box-sizing:border-box}
-body{background:#0b0e11;color:#eaecef;padding:10px}
-.header{background:#1e2329;padding:12px;border-radius:12px;display:flex;justify-content:space-between;border:1px solid #2b3139}
-.logo{font-weight:700} .logo span{color:#f3ba2f}
-.price-card{background:#1e2329;border:1px solid #f3ba2f44;border-radius:16px;padding:18px;text-align:center;margin:10px 0}
-.price{font-size:36px;font-weight:700;color:#f3ba2f}
-.coin-bar{display:flex;gap:8px;overflow-x:auto;padding:10px 0}
-.coin-chip{background:#1e2329;border:1px solid #2b3139;padding:8px 14px;border-radius:20px;cursor:pointer;white-space:nowrap;font-size:12px}
-.coin-chip.active{background:#f3ba2f;color:#000;font-weight:700}
-.ex-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-.ex-card{background:#1e2329;border-radius:8px;padding:8px;text-align:center;border:1px solid #2b3139;font-size:11px}
-.sig-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0}
-.sig{background:#1e2329;border-radius:12px;padding:14px;text-align:center;border-top:3px solid #0ecb81}
-.sig.sl{border-top-color:#f6465d} .sig.tp{border-top-color:#2d8cff}
-#chart{height:600px;background:#131722;border-radius:12px;overflow:hidden}
-.top-list{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
-.top-coin{background:#1e2329;padding:10px;border-radius:8px;display:flex;justify-content:space-between;border:1px solid #2b3139;font-size:12px}
+body{margin:0;background:#060a07;color:#fff;font-family:Inter,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{background:#22c55e;color:#000;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.hero{padding:60px 0}
+h1{font-size:56px;line-height:0.95;margin:0}
+h1 span{color:#22c55e}
+p{color:#9ca3af;max-width:520px;line-height:1.6}
+.btn{background:#22c55e;color:#000;padding:14px 28px;border-radius:999px;border:0;font-weight:700;cursor:pointer;margin-top:20px;display:inline-block;text-decoration:none}
+.card{background:#0d1510;border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:24px;margin-top:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:30px}
+.service{background:#101a12;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px}
+.badge{display:inline-block;background:#122118;border:1px solid rgba(34,197,94,0.2);color:#86efac;padding:6px 12px;border-radius:999px;font-size:11px;margin-bottom:16px}
 </style>
 </head>
 <body>
-
-<div class="header">
-<div class="logo">📈 Trading Teacher <span>UNIVERSE FIXED</span></div>
-<div style="background:#0ecb81;color:#000;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700">● CHART FIXED</div>
+<div class="wrap">
+<div class="nav">
+<div style="display:flex;gap:10px;align-items:center"><div class="logo">W</div><div><b>WAHAB</b><div style="font-size:10px;color:#888;letter-spacing:2px">TRADING ACADEMY</div></div></div>
+<a href="#contact" class="btn" style="padding:10px 20px;font-size:13px">Join Now</a>
 </div>
 
-<div class="coin-bar" id="coinBar"></div>
+<div class="hero">
+<div class="badge">✓ SEBI-COMPLIANT • NO TIPS, ONLY SKILL</div>
+<h1>Learn<br>Professional<br><span>Trading</span></h1>
+<p>Wahab Trading Academy transforms beginners into disciplined traders. Master Forex, Crypto & Stocks with price action, risk management & live market psychology.</p>
+<a href="https://wa.me/923321868151" class="btn">Start Learning →</a>
 
-<div class="price-card">
-<div style="font-size:10px;color:#848e9c" id="pairName">BTC/USDT • REAL API</div>
-<div class="price" id="mainPrice">$79,090.44</div>
-<div style="color:#0ecb81;font-size:13px;margin-top:6px">▲ BOS CONFIRMED - BUY ACTIVE</div>
+<div class="grid">
+<div class="service"><h3>📈 Forex Trading</h3><p style="font-size:13px">Price action, London session, risk management 1:2+</p></div>
+<div class="service"><h3>₿ Crypto Pro</h3><p style="font-size:13px">Spot, futures, on-chain analysis, portfolio building</p></div>
+<div class="service"><h3>📊 Stock Swing</h3><p style="font-size:13px">Daily charts, breakouts, position sizing mastery</p></div>
 </div>
 
-<div class="ex-grid" id="exList"></div>
-
-<div class="sig-grid">
-<div class="sig"><div style="font-size:10px;color:#848e9c">ENTRY</div><div id="entryP" style="font-weight:700;margin-top:6px;color:#0ecb81">$79,090</div></div>
-<div class="sig sl"><div style="font-size:10px;color:#848e9c">STOP LOSS</div><div id="slP" style="font-weight:700;margin-top:6px;color:#f6465d">$78,671</div></div>
-<div class="sig tp"><div style="font-size:10px;color:#848e9c">TAKE PROFIT</div><div id="tpP" style="font-weight:700;margin-top:6px;color:#2d8cff">$79,929</div></div>
-</div>
-
-<div style="font-size:12px;font-weight:700;margin:10px 0">🌍 Top 20 Coins - Click to Trade Any Coin</div>
-<div class="top-list" id="topList"></div>
-
-<!-- CHART FIXED - IFRAME METHOD (Never Black) -->
-<div style="background:#1e2329;border-radius:16px;padding:10px;border:1px solid #2b3139;margin-top:10px">
-<div style="margin-bottom:8px;font-weight:700" id="chartTitle">BTC/USDT - 4H Chart</div>
-<div id="chart">
-<iframe id="tvFrame" style="width:100%;height:600px;border:none;border-radius:12px" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_b9a2d&symbol=BINANCE%3ABTCUSDT&interval=240&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=%231E2329&theme=dark&style=1&timezone=Etc%2FUTC&studies=%5B%5D&theme=dark&style=1&timezone=Etc%2FUTC"></iframe>
+<div class="card" id="contact">
+<h2 style="margin:0">Talk to Wahab</h2>
+<p>WhatsApp: +92 332 1868151<br>Email: hello@wahabtrading.com<br>Location: Lahore • Dubai • Online</p>
+<a href="https://wa.me/923321868151?text=Hi%20Wahab%20I%20want%20to%20learn%20trading" class="btn">WhatsApp Now</a>
 </div>
 </div>
-
-<script>
-let coins=["BTCUSDT","ETHUSDT","SOLUSDT","BNBUSDT","XRPUSDT","DOGEUSDT","ADAUSDT","AVAXUSDT","LINKUSDT","TRXUSDT","DOTUSDT","MATICUSDT","LTCUSDT","SHIBUSDT","PEPEUSDT","APTUSDT","NEARUSDT","ARBUSDT","OPUSDT","SUIUSDT"];
-let currentCoin="BTCUSDT";
-
-function renderBar(){
-document.getElementById('coinBar').innerHTML=coins.map(c=>`<div class="coin-chip ${c===currentCoin?'active':''}" onclick="selectCoin('${c}')">${c.replace('USDT','')}</div>`).join('');
-}
-
-function selectCoin(sym){
-currentCoin=sym;
-renderBar();
-document.getElementById('pairName').innerText=sym+' • BINANCE REAL API • 7 EXCHANGES';
-document.getElementById('chartTitle').innerText=sym.replace('USDT','')+'/USDT - 4H Chart';
-// CHANGE CHART - IFRAME (Stable)
-document.getElementById('tvFrame').src=`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_b9a2d&symbol=BINANCE%3A${sym}&interval=240&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=%231E2329&theme=dark&style=1&timezone=Etc%2FUTC&studies=%5B%5D&theme=dark`;
-updatePrice();
-}
-
-async function updatePrice(){
-try{
-let r=await fetch(https://api.binance.com/api/v3/ticker/price?symbol=${currentCoin});
-let d=await r.json(); let p=parseFloat(d.price);
-document.getElementById('mainPrice').innerText='$'+p.toLocaleString(undefined,{maximumFractionDigits: p>10?2:6});
-let e=p, sl=p*0.9947, tp=e+(e-sl)*2;
-document.getElementById('entryP').innerText='$'+ (p>10?e.toFixed(2):e.toFixed(6));
-document.getElementById('slP').innerText='$'+ (p>10?sl.toFixed(2):sl.toFixed(6));
-document.getElementById('tpP').innerText='$'+ (p>10?tp.toFixed(2):tp.toFixed(6));
-document.getElementById('exList').innerHTML=['BINANCE','COINBASE','KRAKEN','BYBIT','OKX','KUCOIN','BITGET'].map(ex=>`<div class="ex-card">${ex}<br><b style="color:#f3ba2f">$${p.toLocaleString(undefined,{maximumFractionDigits:p>10?2:5})}</b></div>`).join('');
-
-// Top list
-let all=await fetch('https://api.binance.com/api/v3/ticker/price');
-let allData=await all.json();
-let filtered=allData.filter(x=>coins.includes(x.symbol));
-document.getElementById('topList').innerHTML=filtered.map(x=>`<div class="top-coin" onclick="selectCoin('${x.symbol}')" style="cursor:pointer"><span>${x.symbol.replace('USDT','')}</span><b style="color:#f3ba2f">$${parseFloat(x.price).toLocaleString(undefined,{maximumFractionDigits:parseFloat(x.price)>10?2:6})}</b></div>`).join('');
-}catch(e){}
-}
-
-renderBar();
-updatePrice();
-setInterval(updatePrice,3000);
-</script>
+</div>
 </body>
 </html>
