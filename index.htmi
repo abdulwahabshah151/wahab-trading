@@ -1,4 +1,50 @@
-Meta AI
-index.html
-Content is user-generated and unverified.
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wahab Trading</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0e1a;color:#fff}
+.navbar{display:flex;justify-content:space-between;padding:20px 5%;border-bottom:1px solid #1a2332}
+.logo{font-size:26px;font-weight:700;color:#00d09c}
+.logo span{color:#fff}
+.btn{background:#00d09c;color:#fff;padding:12px 28px;border-radius:30px;text-decoration:none;font-weight:600}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 5%;flex-wrap:wrap;gap:40px}
+.hero h1{font-size:48px;line-height:1.2;margin-bottom:20px}
+.hero h1 span{color:#00d09c}
+.hero p{color:#8a9bb5;font-size:18px;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;padding:0 5% 80px}
+.card{background:#151b2e;padding:30px;border-radius:16px;border:1px solid #1e2a44}
+.contact{padding:80px 5%;text-align:center}
+.whatsapp{background:#25D366;padding:15px 40px;border-radius:50px;color:#fff;text-decoration:none;font-weight:700;display:inline-block;margin-top:20px}
+footer{padding:30px;text-align:center;color:#5a6a85;border-top:1px solid #1a2332}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="logo">WAHAB<span>TRADING</span></div><a href="#" class="btn">Join Now</a></nav>
+<section class="hero">
+<div style="flex:1;min-width:300px">
+<h1>Trade Smart, <span>Earn Bigger</span> With Wahab</h1>
+<p>Pakistan's trusted trading platform. Learn Crypto, Forex & Stock trading with professional guidance.</p>
+<a href="#" class="btn">Start Trading Now</a>
+</div>
+<div style="flex:1;min-width:300px"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" style="width:100%;border-radius:20px"></div>
+</section>
+<div class="cards">
+<div class="card"><h3>📈 Crypto Trading</h3><p>Bitcoin, Ethereum daily signals 90% accuracy.</p></div>
+<div class="card"><h3>💹 Forex Trading</h3><p>EUR/USD, GBP/USD professional strategies.</p></div>
+<div class="card"><h3>📊 Stock Market</h3><p>PSX & US Stocks complete training in Urdu.</p></div>
+<div class="card"><h3>🎓 Trading Course</h3><p>Complete A-Z course + Lifetime support.</p></div>
+<div class="card"><h3>🤖 VIP Signals</h3><p>Daily 5-10 premium signals WhatsApp group.</p></div>
+<div class="card"><h3>💼 Account Management</h3><p>Safe account management with weekly profit.</p></div>
+</div>
+<section class="contact">
+<h2>Ready to Start?</h2>
+<a href="https://wa.me/923000000000" class="whatsapp">💬 Chat on WhatsApp</a>
+</section>
+<footer><p>© 2026 Wahab Trading | Quetta Pakistan</p></footer>
+</body>
+</html>
